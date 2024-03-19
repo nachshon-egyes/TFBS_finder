@@ -11,4 +11,4 @@ It has been established that much of the phenotypic differences we observe betwe
 - In the event that the sequence changes will also be specified by the user, a postulated change in binding affinity by the potential TF will also be returned.
 
 
-![[DNA-bound_TF](https://github.com/nachshon-egyes/TFBS_finder/assets/160335278/8bcabb9a-c764-41c7-b8cc-efeb6fdfff3c)
+![DNA-bound_TF](https://github.com/nachshon-egyes/TFBS_finder/assets/160335278/8bcabb9a-c764-41c7-b8cc-efeb6fdfff3c)
