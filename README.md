@@ -29,7 +29,22 @@ If you wish to use 'regular mode', the csv file should contain **id** and **sequ
 ### 4 different files
 - **TFBS_data.csv**
 
+| jaspar_id | TF | length | consensus | degen_consensus | matrix | pwm | pssm | max_scores | mean | dev |  
+| --------- | -- | ------ | --------- | --------------- | ------ | --- | ---- | ---------- | ---- | --- |
+| TFBS ID | transcription factor name | length of sequence the TF binds to | the sequence the TF is most likely to bind | the degenerate TFBS - special letters are used for positions with more than 1 possible nucleotide | number of times each nucleotide was shown to appear at each position of the TFBS | position weighted matrix - relative frequency of each nucleotide at each position | position-specific scoring matrix - score for " " " " " | list of all maximal scores for each position | mean of list | deviation of mean from the grand mean (means of all TFBSs) |
 
+- **matches.csv** / **matches_comp.csv**
+
+| sequence_ID |	jaspar_ID |	start |	end	| subseq | consensus | is_consensus |	TF | score | norm_score | TFBS_score | norm_TFBS_score |
+| ----------- | --------- | ----- | --- | ------ | --------- | ------------ | -- | ----- | ---------- | ---------- | --------------- |
+| ID of sequence tested | TFBS ID that was found within the sequence | start index of TFBS found within the test sequence | end index | the sub-sequence found | the TFBS consensus sequence | boolean indicating if the sub-sequence found is the consensus sequence | naem of TF that binds the TFBS | score of sub-sequence as calculatd using the pssm | score normalized to the grand mean (for comparison to other scores) | maximal score for that TFBS | the grand mean |
+
+- **summary.csv**  
+summary of all matching results
+
+| TF | counts | sum_scores | mean_scores | mean_difference | abs_mean_diff |
+| -- | ------ | ---------- | ----------- | --------------- | ------------- |
+| | number of times the TF was found within the sequences | in regular mode - sum of all normalized scores for that TF | " " " - mean " " " " " " " | in compare mode - mean difference in scores for all sequence pairs with that TF | |  
 
 
 Note - in compare mode, infinity values were set to 2 for enabling data visualization of score difference while still keeping the large difference in binding affinity that's observed.
