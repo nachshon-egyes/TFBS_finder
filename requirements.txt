@@ -1,0 +1,9 @@
+The following python modules should be installed before using the program:
+- math
+- os
+- sys
+- shutil
+- numpy
+- pandas
+- matplotlib
+- biopython
